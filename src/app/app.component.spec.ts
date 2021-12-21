@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { FancyButtonComponent } from './fancy-button/fancy-button.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -9,7 +10,8 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        FancyButtonComponent
       ],
     }).compileComponents();
   });
@@ -32,4 +34,5 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('div')?.textContent).toContain('Angular_01 app is running!');
   });
+
 });
