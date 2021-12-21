@@ -21,11 +21,13 @@ jobs:
       - uses: actions/setup-node@v2.5.0
         with:
           node-version: '12.x'
-      - name: Run Karma Tests
+      - name: Run component tests
         run: |
           npm install -g @angular/cli
           npm install
           ng test
+      - name: Run integration tests
+        run: |
           ng e2e
 
 
